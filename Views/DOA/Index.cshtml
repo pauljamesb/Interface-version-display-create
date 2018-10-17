@@ -1,0 +1,21 @@
+﻿@model DayViewModel
+
+@{
+    ViewData["Title"] = "Days out App";
+}
+
+@ViewData["Title"]
+<br />
+<br />
+
+@foreach (var item in Model.AllDays)
+{
+    <div class="dOAIndiItem">
+            @item.Id
+            @item.Title
+            <div class="dOAIndiItem"__btns>
+                <partial name="_TableButtonPartial" model="item.Id" />
+            </div>
+    </div>
+
+}

@@ -1,0 +1,18 @@
+﻿@model DOA.Models.Day
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<form method="post" asp-action="Delete">
+    <div>
+        <label asp-for="Id"></label><br />
+        <input asp-for="Id" disabled />
+    </div>
+
+    <input type="submit" asp-route-id="@Model.Id" value="Delete" />
+    <a asp-action="Index">Back to list</a>
+</form>
+
